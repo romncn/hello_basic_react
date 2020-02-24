@@ -74,25 +74,60 @@ class App extends React.Component {
     return (
       <div className="flex-wrapper">
 
-        <div className="Top-page">
-          <Header/>
+        <div className="Top-page mb-5">
+          <Header />
           <div className="container">
             <Content contenttitle="Show Basic React" />
-            <h3>{this.state.message}</h3>
-            <button onClick={this.checkMessage}>Click</button>
-            <h3>{this.state.data}</h3>
-            <button onClick={this.insertData}>Insert</button>
-            <p /><button onClick={this.Alert}>Alert</button>
-            <p /><input type="text" onChange={this.onChange.bind(this)}></input>
-            <p /><h1>Show : {this.state.type}</h1>
-            <h2>{this.props.contenttitle}</h2>
-            <p>{this.state.name}</p>
-            <p>{this.state.status}</p>
-            <p>{this.state.count}</p>
+            <div className="row">
+              <div className="col">
+                <div class="alert box-pink show-box">
+                  <h2 className="text-center bg-dark p-2">State Change Message</h2>
+                  <p/><h3>{this.state.message}</h3>
+                  <button onClick={this.checkMessage}>Click</button>
+                </div>
+              </div>
+
+              <div className="col">
+                <div class="alert box-danger show-box">
+                <h2 className="text-center bg-dark p-2">State Insert Data</h2>
+                  <p/><h3>{this.state.data}</h3>
+                  <button onClick={this.insertData}>Insert</button>
+                </div>
+              </div>
+
+              <div className="col">
+                <div class="alert box-info show-box">
+                <h2 className="text-center bg-dark p-2">Click to show Alert</h2>
+                  <p /><button onClick={this.Alert}>Alert</button>
+                </div>
+              </div>
+            </div>
+
+            <div className="row mt-5">
+              <div className="col">
+                <div class="alert box-warning show-box">
+                <h2 className="text-center bg-dark p-2">Insert text to show</h2>
+                  <p /><input type="text" onChange={this.onChange.bind(this)} maxLength="12" placeholder="can input 12 text"></input>
+                  <p /><h1>Show : {this.state.type}</h1>
+                </div>
+              </div>
+
+              <div className="col">
+                <div class="alert box-success show-box">
+                <h2 className="text-center bg-dark p-2">Show Change state status</h2>
+                  <p>{this.state.status}</p>
+                </div>
+              </div>
+
+              <div className="col">
+                <div class="alert box-purple show-box">
+                <h2 className="text-center bg-dark p-2">State interval count +1 </h2>
+                  <p>{this.state.count}</p>
+                </div>
+              </div>
+
+            </div>
           </div>
-          {/* <Link to="/Profile" >
-            <h1>Profile</h1>
-          </Link> */}
         </div>
 
         <div className="Buttom-page">

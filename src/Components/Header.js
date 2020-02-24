@@ -4,7 +4,7 @@ class Header extends React.Component {
   render() {
     return (
       <div>
-        <nav class="navbar navbar-inverse navbar-fixed-top navbar-dark navbar-color">
+        <nav class="navbar navbar-inverse navbar-fixed navbar-dark navbar-color">
           <a class="navbar-brand " href="#">RomReact</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

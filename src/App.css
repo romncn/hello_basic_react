@@ -11,3 +11,41 @@ body{
 .navbar-color{
   background-color: teal;
 }
+.footer-color{
+  background-color: DarkSlateGrey;
+}
+
+.box-purple { 
+  border-color: #694D9F;
+  background: #694D9F;
+  color: #fff; 
+}
+.box-pink { 
+  border-color: rgb(165, 48, 136);
+  background: rgb(173, 37, 139);
+  color: #fff; 
+}
+.box-info{ 
+  border-color: #B4E1E4;
+  background: #00CED1;
+  color: #fff; 
+}
+.box-danger { 
+  border-color: #B63E5A;
+  background: #8B4513;
+  color: #fff; 
+}
+.box-warning {
+   border-color: rgb(202, 199, 20);
+   background: #FFA500;
+   color: #fff; 
+  }
+.box-success { 
+  border-color: #19B99A;
+  background: #20A286;
+  color: #fff; 
+}
+.show-box{
+  width: 100%;
+  height: 300px;
+}
