@@ -16,34 +16,36 @@ body{
 }
 
 .box-purple { 
-  border-color: #694D9F;
-  background: #694D9F;
-  color: #fff; 
+  background: #663399;
+  color: #f7f7f7; 
 }
 .box-pink { 
-  border-color: rgb(165, 48, 136);
   background: rgb(173, 37, 139);
-  color: #fff; 
+  color: #f7f7f7; 
 }
 .box-info{ 
-  border-color: #B4E1E4;
-  background: #00CED1;
-  color: #fff; 
+  background: #20B2AA;
+  color: #f7f7f7; 
 }
 .box-danger { 
-  border-color: #B63E5A;
   background: #8B4513;
-  color: #fff; 
+  color: #f7f7f7; 
 }
 .box-warning {
-   border-color: rgb(202, 199, 20);
    background: #FFA500;
-   color: #fff; 
+   color: #f7f7f7; 
   }
 .box-success { 
-  border-color: #19B99A;
-  background: #20A286;
-  color: #fff; 
+  background: #228B22;
+  color: #f7f7f7; 
+}
+.box-red { 
+  background: rgb(206, 71, 38);
+  color: #f7f7f7; 
+}
+.box-blue { 
+  background: rgb(44, 97, 197);
+  color: #f7f7f7; 
 }
 .show-box{
   width: 100%;

@@ -6,6 +6,14 @@ import Footer from './Components/Footer';
 import swal from 'sweetalert2';
 import { Link } from 'react-router';
 
+const TitleBox = (props) => {
+  return (
+    <div >
+      <h2 className="text-center bg-dark p-2">{props.texttitlebox}</h2>
+      <p className="pt-5" />
+    </div>
+  )
+}
 
 
 class App extends React.Component {
@@ -47,7 +55,12 @@ class App extends React.Component {
     })
   }
   Alert() {
-    swal.fire('Any fool can use a computer')
+    swal.fire({
+      icon: 'success',
+      title: 'Your work has been saved',
+      showConfirmButton: false,
+      timer: 1000
+    })
   }
 
   render() {
@@ -80,53 +93,68 @@ class App extends React.Component {
             <Content contenttitle="Show Basic React" />
             <div className="row">
               <div className="col">
-                <div class="alert box-pink show-box">
-                  <h2 className="text-center bg-dark p-2">State Change Message</h2>
-                  <p/><h3>{this.state.message}</h3>
-                  <button onClick={this.checkMessage}>Click</button>
+                <div class="alert box-pink show-box text-center">
+                  <TitleBox texttitlebox="State Change Message" />
+                  <button type="button" class="btn btn-light" onClick={this.checkMessage}>Click</button>
+                  <p/><h4>{this.state.message}</h4>
                 </div>
               </div>
 
               <div className="col">
-                <div class="alert box-danger show-box">
-                <h2 className="text-center bg-dark p-2">State Insert Data</h2>
-                  <p/><h3>{this.state.data}</h3>
-                  <button onClick={this.insertData}>Insert</button>
+                <div class="alert box-danger show-box text-center">
+                  <TitleBox texttitlebox="Click to Insert Data" />
+                  <button type="button" class="btn btn-light" onClick={this.insertData}>Insert</button>
+                  <p/><h4>{this.state.data}</h4>
                 </div>
               </div>
 
               <div className="col">
-                <div class="alert box-info show-box">
-                <h2 className="text-center bg-dark p-2">Click to show Alert</h2>
-                  <p /><button onClick={this.Alert}>Alert</button>
+                <div class="alert box-info show-box text-center">
+                  <TitleBox texttitlebox="Click to show Alert" />
+                  <button type="button" class="btn btn-light" onClick={this.Alert}>Alert</button>
                 </div>
               </div>
             </div>
 
             <div className="row mt-5">
               <div className="col">
-                <div class="alert box-warning show-box">
-                <h2 className="text-center bg-dark p-2">Insert text to show</h2>
-                  <p /><input type="text" onChange={this.onChange.bind(this)} maxLength="12" placeholder="can input 12 text"></input>
-                  <p /><h1>Show : {this.state.type}</h1>
+                <div class="alert box-warning show-box text-center">
+                  <TitleBox texttitlebox="Insert text to show" />
+                  <input type="email" class="form-control" onChange={this.onChange.bind(this)} maxLength="12" placeholder="maximum 12 text"></input>
+                  <p /><h4>Show : {this.state.type}</h4>
                 </div>
               </div>
 
               <div className="col">
-                <div class="alert box-success show-box">
-                <h2 className="text-center bg-dark p-2">Show Change state status</h2>
-                  <p>{this.state.status}</p>
+                <div class="alert box-success show-box text-center">
+                  <TitleBox texttitlebox="Show Change state status" />
+                  <h4>{this.state.status}</h4>
                 </div>
               </div>
 
               <div className="col">
-                <div class="alert box-purple show-box">
-                <h2 className="text-center bg-dark p-2">State interval count +1 </h2>
-                  <p>{this.state.count}</p>
+                <div class="alert box-purple show-box text-center">
+                  <TitleBox texttitlebox="State interval count +1" />
+                  <h4>{this.state.count}</h4>
                 </div>
               </div>
-
             </div>
+
+            <div className="row mt-5">
+              <div className="col">
+              <div class="alert box-red show-box text-center">
+                  <TitleBox texttitlebox="State interval count +1" />
+                  <h4>{this.state.count}</h4>
+                </div>
+              </div>
+              <div className="col">
+              <div class="alert box-blue show-box text-center">
+                  <TitleBox texttitlebox="State interval count +1" />
+                  <h4>{this.state.count}</h4>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
 
