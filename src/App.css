@@ -1,6 +1,13 @@
+body{
+  font-family: 'Mitr', sans-serif ;
+}
 .flex-wrapper{
   display: flex;
   min-height: 100vh;
   flex-direction: column;
   justify-content: space-between;
+
+}
+.navbar-color{
+  background-color: teal;
 }

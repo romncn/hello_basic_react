@@ -75,23 +75,24 @@ class App extends React.Component {
       <div className="flex-wrapper">
 
         <div className="Top-page">
-          <Header headertitle={"Welcome to Basic React By Romncn"} />
-          <Content contenttitle="Show Basic React"/>
-          <h3>{this.state.message}</h3>
-          <button onClick={this.checkMessage}>Click</button>
-          <h3>{this.state.data}</h3>
-          <button onClick={this.insertData}>Insert</button>
-          <p /><button onClick={this.Alert}>Alert</button>
-          <p /><input type="text" onChange={this.onChange.bind(this)}></input>
-          <p /><h1>Show : {this.state.type}</h1>
-          <h2>{this.props.contenttitle}</h2>
-          <p>{this.state.name}</p>
-          <p>{this.state.status}</p>
-          <p>{this.state.count}</p>
-
-          <Link to="/Profile" >
+          <Header/>
+          <div className="container">
+            <Content contenttitle="Show Basic React" />
+            <h3>{this.state.message}</h3>
+            <button onClick={this.checkMessage}>Click</button>
+            <h3>{this.state.data}</h3>
+            <button onClick={this.insertData}>Insert</button>
+            <p /><button onClick={this.Alert}>Alert</button>
+            <p /><input type="text" onChange={this.onChange.bind(this)}></input>
+            <p /><h1>Show : {this.state.type}</h1>
+            <h2>{this.props.contenttitle}</h2>
+            <p>{this.state.name}</p>
+            <p>{this.state.status}</p>
+            <p>{this.state.count}</p>
+          </div>
+          {/* <Link to="/Profile" >
             <h1>Profile</h1>
-          </Link>
+          </Link> */}
         </div>
 
         <div className="Buttom-page">
