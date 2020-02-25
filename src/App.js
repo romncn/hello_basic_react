@@ -63,6 +63,7 @@ class App extends React.Component {
     })
   }
 
+
   render() {
     if (this.state.status == 'Pause') {
       setTimeout(() => {
@@ -96,7 +97,7 @@ class App extends React.Component {
                 <div class="alert box-pink show-box text-center">
                   <TitleBox texttitlebox="State Change Message" />
                   <button type="button" class="btn btn-light" onClick={this.checkMessage}>Click</button>
-                  <p/><h4>{this.state.message}</h4>
+                  <p /><h4>{this.state.message}</h4>
                 </div>
               </div>
 
@@ -104,7 +105,7 @@ class App extends React.Component {
                 <div class="alert box-danger show-box text-center">
                   <TitleBox texttitlebox="Click to Insert Data" />
                   <button type="button" class="btn btn-light" onClick={this.insertData}>Insert</button>
-                  <p/><h4>{this.state.data}</h4>
+                  <p /><h4>{this.state.data}</h4>
                 </div>
               </div>
 
@@ -142,15 +143,45 @@ class App extends React.Component {
 
             <div className="row mt-5">
               <div className="col">
-              <div class="alert box-red show-box text-center">
-                  <TitleBox texttitlebox="State interval count +1" />
-                  <h4>{this.state.count}</h4>
+                <div class="alert box-red show-box text-center">
+                  <h2 className="text-center bg-dark p-2">Input Form</h2>
+                  {/* <TitleBox texttitlebox="Input Form" /> */}
+                  <form className="form-inline">
+                    <div class="form-row ">
+                      <div class="col-auto my-1">
+                        <div className="row">
+                          <div className="col">
+                            <label class="mr-sm-2" for="inlineFormCustomSelect">Preference</label>
+                            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                              <option selected>Choose...</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                          </div>
+                          <div class=" col">
+                            <label for="inputMDEx">Choose your date</label>
+                            <input type="date" id="inputMDEx" class="form-control" />
+                          </div>
+                        </div>
+                        <p/> <label for="inputPassword6">Password</label>
+                        <input type="password" id="inputPassword6" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" />
+                        <small id="passwordHelpInline" class="text-warning">
+                          Must be 8-20 characters long.
+                        </small>
+                      </div>
+                    </div>
+                  </form>
                 </div>
               </div>
               <div className="col">
-              <div class="alert box-blue show-box text-center">
-                  <TitleBox texttitlebox="State interval count +1" />
-                  <h4>{this.state.count}</h4>
+                <div class="alert box-blue show-box text-center">
+                  {/* <TitleBox texttitlebox="Location Map"/> */}
+                  <h2 className="text-center bg-dark p-2">Location Map</h2>
+                  <div id="map-container-google-2" class="z-depth-1-half map-container p-4" style={{ height: "200px" }}>
+                    <iframe src="https://www.google.com/maps/embed?origin=mfe&pb=!1m3!2m1!1sbangkok!6i13" frameborder="0"
+                      style={{ border: "0" }} allowfullscreen></iframe>
+                  </div>
                 </div>
               </div>
             </div>
